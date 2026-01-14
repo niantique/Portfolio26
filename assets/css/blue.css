@@ -1,0 +1,106 @@
+:root {
+    --font-main: "Anton", sans-serif;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    text-transform: uppercase;
+}
+
+#blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/blue_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    p {
+        color: white;
+        font-size: 35px;
+        padding-top: 2%;
+    }
+
+    .desktop-text {
+        display: block;
+    }
+
+    .mobile-text {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        p {
+            padding-left: 15vw;
+            padding-right: 15vw;
+            text-align: center;
+        }
+        .desktop-text {
+            display: none;
+        }
+        .mobile-text {
+            display: block;
+        }
+    }
+
+
+
+    .container-blue {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: center;
+        width: 80%;
+        border-radius: 30px;
+        border: 10px solid rgb(255, 255, 255, 0.7);
+        background-image: url("../images/blue_img.png");
+        height: 80vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        h1 {
+            color: rgb(255, 255, 255, 0.7);
+            font-size: 417.78px;
+            line-height: 1;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        #scroll-text {
+            white-space: nowrap;
+            display: inline-block;
+            will-change: transform;
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) { 
+    #blue {
+        height: 95vh;
+        .container-blue {
+            height: 70vh;
+            width: 90%;
+            top: 0;
+        }
+    p {
+        padding-top: 3vh;
+        font-size: 5vw;
+    }
+    }
+
+}

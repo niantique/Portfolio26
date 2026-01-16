@@ -153,8 +153,8 @@ let currentProject = 0;
 function updateProject(direction = 1) {
     const project = projects[currentProject];
 
-    playerImg.style.transition = "transform 0.4s ease, opacity 0.4s ease"; 
-    playerImg.style.transform = `translateX(${direction * 40}px)`; 
+    playerImg.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+    playerImg.style.transform = `translateX(${direction * 40}px)`;
     playerImg.style.opacity = "0";
 
     setTimeout(() => {

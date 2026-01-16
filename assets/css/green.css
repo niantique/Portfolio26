@@ -3,6 +3,9 @@
     --font-second: "Nothing You Could Do", cursive;
     --font-player: "Inter", sans-serif;
     --font-player-txt: "Reenie Beanie", cursive;
+    --color-green-fluo: #C5FFC5;
+    --color-green: #007959;
+    --color-green-dark: #002C00;
 }
 
 .anton-regular {
@@ -59,7 +62,7 @@
         text-align: center;
 
         h1 {
-            color: #C5FFC5;
+            color: var(--color-green-fluo);
             font-size: 18vw;
             line-height: 1;
             white-space: nowrap;
@@ -75,7 +78,7 @@
         object-fit: center;
         width: 80%;
         border-radius: 30px;
-        border: 10px solid #C5FFC5;
+        border: 10px solid var(--color-green-fluo);;
         background-image: url("../images/green_img.png");
         background-position: center;
         height: 65vh;
@@ -94,7 +97,7 @@
 
         #scroll-text {
             padding-top: 4vh;
-            color: #C5FFC5;
+            color: var(--color-green-fluo);
             font-size: 80px;
             line-height: 1;
             white-space: nowrap;
@@ -304,7 +307,7 @@
     position: relative;
 
     h1 {
-        color: #C5FFC5;
+        color: var(--color-green-fluo);
         font-size: 5vw;
     }
 
@@ -368,7 +371,7 @@
                 background-color: #002C00;
                 border: none;
                 font-size: 5vw;
-                color: #C5FFC5;
+                color: var(--color-green-fluo);
                 cursor: pointer;
                 transition: transform 0.2s ease;
                 padding-right: 5vw;
@@ -395,7 +398,7 @@
     h1 {
         padding-left: 3vw;
         padding-bottom: 5vh;
-        color: #C5FFC5;
+        color: var(--color-green-fluo);
         font-size: 5vw;
         align-self: flex-start;
     }
@@ -564,7 +567,7 @@
     .hint-more {
         position: absolute;
         font-size: 1.8vw;
-        color: #C5FFC5;
+        color: var(--color-green-fluo);
         opacity: 0.9;
         pointer-events: none;
         animation: floatHint 3s ease-in-out infinite;
@@ -741,14 +744,14 @@
     #projects .hint-right {
         display: block;
         margin-bottom: 3vh;
-        color: #C5FFC5;
+        color: var(--color-green-fluo);
         font-family: var(--font-player-txt);
     }
 
     #projects .hint-more {
         display: block;
         margin-top: 3vh;
-        color: #C5FFC5;
+        color: var(--color-green-fluo);
         font-family: var(--font-player-txt);
     }
 
@@ -766,7 +769,7 @@
 
     h1 {
         padding-left: 3vw;
-        color: #C5FFC5;
+        color: var(--color-green-fluo);
         font-size: 5vw;
         font-family: var(--font-main);
     }
@@ -816,7 +819,7 @@
         background-color: rgba(0, 17, 0, 0.8);
         border-radius: 20px;
         padding: 4vh 4vw;
-        color: #C5FFC5;
+        color: var(--color-green-fluo);
         font-family: var(--font-player);
         display: none;
         position: relative;
@@ -843,7 +846,7 @@
             right: 2vw;
             font-size: 3vw;
             cursor: pointer;
-            color: #C5FFC5;
+            color: var(--color-green-fluo);
         }
     }
 }
@@ -943,7 +946,7 @@
 
     h1 {
         padding-left: 3vw;
-        color: #C5FFC5;
+        color: var(--color-green-fluo);
         font-size: 5vw;
     }
 
@@ -987,17 +990,17 @@
         background-repeat: no-repeat;
         width: 80%;
         border-radius: 30px;
-        border: 10px solid #C5FFC5;
+        border: 10px solid var(--color-green-fluo);
         padding: 5vw;
 
         h1 {
             font-size: 4vw;
             line-height: 1;
-            color: #C5FFC5;
+            color: var(--color-green-fluo);
 
             a {
                 text-decoration: none;
-                color: #C5FFC5;
+                color: var(--color-green-fluo);
             }
         }
 
@@ -1052,7 +1055,7 @@
             a {
                 text-transform: uppercase;
                 text-decoration: none;
-                color: #C5FFC5;
+                color: var(--color-green-fluo);
                 font-size: 2vw;
                 line-height: 1;
 

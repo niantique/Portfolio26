@@ -404,7 +404,7 @@
     }
 
     .container-player {
-        background-image: url("../images/player-bg-ylw.png");
+        background-image: url("../images/player-bg-yellow.png");
         display: flex;
         justify-content: center;
         flex-direction: column;

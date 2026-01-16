@@ -3,7 +3,7 @@
     --font-second: "Nothing You Could Do", cursive;
     --font-player: "Inter", sans-serif;
     --font-player-txt: "Reenie Beanie", cursive;
-    --color-red-fluo: #FF5555;
+    --color-red-fluo: #fce8cb;
     --color-red: #C62828;
     --color-red-dark: #2C0000;
 }
@@ -166,7 +166,7 @@
 
             h3 {
                 font-size: 2.5vw;
-                color: white;
+                color: #fce8cb;
                 line-height: 1;
                 padding-top: 10vh;
                 padding-left: 2vw;
@@ -204,7 +204,7 @@
 
         h3 {
             font-size: 2.5vw;
-            color: white;
+            color: #fce8cb;
             line-height: 1;
             padding-left: 1vw;
         }
@@ -567,7 +567,7 @@
     .hint-more {
         position: absolute;
         font-size: 1.8vw;
-        color: var(--color-red-fluo);
+        color: #fce8cb;
         opacity: 0.9;
         pointer-events: none;
         animation: floatHint 3s ease-in-out infinite;
@@ -744,14 +744,14 @@
     #projects .hint-right {
         display: block;
         margin-bottom: 3vh;
-        color: var(--color-red-fluo);
+        color: #fce8cb;
         font-family: var(--font-player-txt);
     }
 
     #projects .hint-more {
         display: block;
         margin-top: 3vh;
-        color: var(--color-red-fluo);
+        color: #fce8cb;
         font-family: var(--font-player-txt);
     }
 
@@ -829,6 +829,7 @@
         h2 {
             font-size: 3vw;
             margin-bottom: 2vh;
+            color: #fce8cb;
         }
 
         p {
@@ -993,7 +994,7 @@
         h1 {
             font-size: 4vw;
             line-height: 1;
-            color: var(--color-red-fluo);
+            color: #fce8cb;
 
             a {
                 text-decoration: none;

@@ -762,10 +762,10 @@
     padding-bottom: 5vh;
     background-color: #002C00;
     overflow: hidden;
-    background-image: url("../images/forest-bg2.avif");
+    /* background-image: url("../images/forest-bg2.avif");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 
     h1 {
         padding-left: 3vw;

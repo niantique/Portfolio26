@@ -60,7 +60,7 @@ document.addEventListener("keydown", function (e) {
 const container = document.querySelector(".container-green");
 
 container.addEventListener("click", () => {
-        window.location.href = "yellow.html";
+    window.location.href = "yellow.html";
 });
 
 // PARCOURS
@@ -91,7 +91,7 @@ timeline.addEventListener("mouseenter", () => {
         timeline.classList.add("fade-in");
 
         setTimeout(() => {
-           timeline.classList.remove("fade-in"); 
+            timeline.classList.remove("fade-in");
         }, 300);
     }, 300);
 });
@@ -126,3 +126,97 @@ if (window.innerWidth <= 768) {
 }
 
 
+// PROJECTS
+
+const projects = [
+    {
+        topTitle: "Radio Dazzling Yoga",
+        mainTitle: "Dazzling Yoga - Full-Stack Project",
+        img: "assets/images/player-img-dy.png",
+    },
+    {
+        topTitle: "Radio Portfolio Nina",
+        mainTitle: "Portfolio Nina - Front-end & Figma",
+        img: "assets/images/player-img-portfolio25.png",
+    }
+]
+
+const topTitle = document.querySelector("#projects .top p");
+const mainTitle = document.querySelector("#projects .container-title h2");
+const playerImg = document.querySelector("#projects .player-img");
+const btnNext = document.querySelector(".player-btn-right");
+const btnPrev = document.querySelector(".player-btn-left");
+const btnMore = document.querySelector(".container-player-project button");
+
+let currentProject = 0;
+
+function updateProject(direction = 1) {
+    const project = projects[currentProject];
+
+    playerImg.style.transition = "transform 0.4s ease, opacity 0.4s ease"; 
+    playerImg.style.transform = `translateX(${direction * 40}px)`; 
+    playerImg.style.opacity = "0";
+
+    setTimeout(() => {
+        topTitle.textContent = project.topTitle;
+        mainTitle.textContent = project.mainTitle;
+        playerImg.src = project.img;
+
+        playerImg.style.transform = `translateX(${direction * -40}px)`;
+
+        setTimeout(() => {
+            playerImg.style.transform = "translateX(0)";
+            playerImg.style.opacity = "1";
+        }, 50);
+    }, 200);
+}
+
+btnNext.addEventListener("click", () => {
+    currentProject++;
+    if (currentProject >= projects.length) currentProject = 0;
+    updateProject(1);
+});
+
+btnPrev.addEventListener("click", () => {
+    currentProject--;
+    if (currentProject < 0) currentProject = projects.length - 1;
+    updateProject(-1);
+});
+
+updateProject();
+
+// EXPERIENCES XP
+
+const xpData = {
+    alteriade: {
+        title: "Alteriade — Développeuse Web",
+        text: "Développement front-end, intégration responsive, animations, création d'interfaces modernes et immersives."
+    },
+    ny: {
+        title: "New Yorker — Responsable Visuel Merchandiser",
+        text: "Production visuelle, storytelling, direction artistique, création d’univers éditoriaux et narratifs."
+    },
+    sg: {
+        title: "Sostrene Grene — Visuel Merchandiser",
+        text: "Mise en scène, organisation d’espaces, sens du détail, création d’expériences visuelles cohérentes."
+    }
+};
+
+const cards = document.querySelectorAll(".xp-card");
+const descBox = document.getElementById("xp-description");
+const descTitle = document.querySelector(".xp-title");
+const descText = document.querySelector(".xp-text");
+const closeDesc = document.querySelector(".close-desc");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        const key = card.dataset.xp;
+        descTitle.textContent = xpData[key].title;
+        descText.textContent = xpData[key].text;
+        descBox.style.display = "block";
+    });
+});
+
+closeDesc.addEventListener("click", () => {
+    descBox.style.display = "none";
+});

@@ -189,17 +189,27 @@ updateProject();
 
 const xpData = {
     alteriade: {
-        title: "Alteriade — Développeuse Web",
-        text: "Développement front-end, intégration responsive, animations, création d'interfaces modernes et immersives."
+        title: "Alteriade - Développeuse Web",
+        text: `Intégration de mails marketing responsives en HTML, CSS et MJML
+Création de visuels pour les réseaux sociaux et les sites web (pré-home, exit pop-up…)
+Design de newsletters, landing pages et assets pour les campagnes de fin d'année
+Réalisation de GIFs animés pour dynamiser les contenus
+Conception d'assets visuels pour les campagnes PMax et Google Ads
+Développement d'une landing page pour une association, réalisée avec Webflow.`
     },
     ny: {
-        title: "New Yorker — Responsable Visuel Merchandiser",
-        text: "Production visuelle, storytelling, direction artistique, création d’univers éditoriaux et narratifs."
+        title: "New Yorker - Visuel Merchandiser",
+        text: `Création d'univers et réalisation des vitrines  (plans, implantations des vitrines et rayons, signalétiques) en  correspondance avec la charte visuelle.
+Planification des tâches de l'équipe, gestion des ouvertures/fermetures de magasin, organisation des livraisons.
+Optimisation des objectifs de vente en fonction du CA, des indicateurs de vente et des résultats des magasins annexes.`
     },
     sg: {
-        title: "Sostrene Grene — Visuel Merchandiser",
-        text: "Mise en scène, organisation d’espaces, sens du détail, création d’expériences visuelles cohérentes."
-    }
+        title: "Sostrene Grene - Visuel Merchandiser",
+        text: `Création de vitrines et implantation de rayons en correspondance avec la charte visuelle SG.
+Gestion des commandes, organisation des livraisons, rangement du stock et  management de l'équipe dans la continuité du merchandising.
+Optimisation des ventes à partir des indicateurs de ventes (TT, PM, chiffre  d'affaires) et des audits avec la directrice du magasin.
+Transmission des implantations à la directrice merchandising France.
+Organisation d'ateliers DIY avec le centre commercial Créteil Soleil.`}
 };
 
 const cards = document.querySelectorAll(".xp-card");

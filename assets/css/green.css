@@ -822,6 +822,10 @@
         position: relative;
         animation: fadeIn 0.4s ease;
 
+        .xp-text {
+            white-space: pre-line;
+        }
+
         h2 {
             font-size: 3vw;
             margin-bottom: 2vh;

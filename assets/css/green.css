@@ -560,6 +560,9 @@
                         height: 0.8vw;
                     }
                 }
+                button:hover {
+                    background-color: var(--color-green);
+                }
             }
         }
     }
@@ -1029,6 +1032,21 @@
             .modal-player {
                 width: 70vw;
             }
+
+            .modal-links {
+                width: 70vw;
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+                align-items: center;
+                a {
+                    width: 50%;
+                    text-align: center;
+                    font-size: 3vw;
+                    padding: 1vw 2vw;
+                    border-radius: 15px;
+                }
+            }
         }
     }
 }
@@ -1102,14 +1120,8 @@
         }
 
         h2 {
-            font-size: 3vw;
+            font-size: 2vw;
             margin-bottom: 2vh;
-        }
-
-        p {
-            font-size: 1.3vw;
-            line-height: 1.5;
-            font-family: 'Inter', sans-serif;
         }
 
         .close-desc {
@@ -1119,6 +1131,12 @@
             font-size: 3vw;
             cursor: pointer;
             color: var(--color-green-fluo);
+        }
+        
+        p {
+            font-size: 1vw;
+            line-height: 1.5;
+            font-family: 'Inter', sans-serif;
         }
     }
 }
@@ -1181,7 +1199,7 @@
             }
 
             p {
-                font-size: 4vw;
+                font-size: 3vw;
                 line-height: 1.5;
             }
 

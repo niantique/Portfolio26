@@ -76,7 +76,7 @@ const steps = [
     ["2026", "what's next ?"]
 ];
 
-let index = 0;
+let index = steps.length - 1;
 
 timeline.addEventListener("mouseenter", () => {
     index = (index + 1) % steps.length;

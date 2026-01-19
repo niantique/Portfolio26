@@ -133,11 +133,45 @@ const projects = [
         topTitle: "Radio Dazzling Yoga",
         mainTitle: "Dazzling Yoga - Full-Stack Project",
         img: "assets/images/player-img-dy.png",
+        modalTitle: "Dazzling Yoga",
+        modalImages: [
+            "assets/images/modal-dy-1.png",
+            "assets/images/modal-dy-2.png",
+            "assets/images/modal-dy-3.png"
+        ],
+        modalText: `Dazzling Yoga est une application web full-stack développée avec Angular pour le front-end,
+                    Symfony pour l'API back-end et une base SQL structurée pour la gestion des contenus (séances,
+                    niveaux, utilisateurs). L'architecture repose sur une séparation claire des responsabilités :
+                    composants Angular modulaires, services pour la communication HTTP, API REST sécurisée et base
+                    de données normalisée.<br>
+                    En amont du développement, j'ai conçu l'intégralité de l'interface sur Figma, avec maquettes
+                    haute fidélité et prototype fonctionnel. Le design system inclut des composants réutilisables
+                    (palette de couleurs, styles typographiques, boutons, états interactifs) permettant une
+                    cohérence visuelle et une intégration front-end fluide.<br>Cette préparation a guidé la structure
+                    des composants Angular et assuré une correspondance précise entre design et implémentation.
+                    Le résultat est une plateforme moderne, immersive et maintenable, combinant une expérience
+                    utilisateur soignée et une architecture technique robuste.`,
+        modalParoles: "Full-Stack Project",
+        modalLinkGH: "https://github.com/niantique/Dazzling-Yoga-Front",
+        modalLinkView: "https://github.com/niantique/Dazzling-Yoga-Final"
+
     },
     {
         topTitle: "Radio Portfolio Nina",
         mainTitle: "Portfolio Nina - Front-end & Figma",
         img: "assets/images/player-img-portfolio25.png",
+        modalTitle: "Portfolio Nina",
+        modalImages: [
+            "assets/images/modal-pf-1.png",
+            "assets/images/modal-pf-2.png",
+            "assets/images/modal-pf-3.png"
+        ],
+        modalText: `Pour concevoir mon portfolio, j'ai d'abord réalisé un maquettage complet sur Figma, en construisant un design system structuré : palette de bleus inspirée des nuances de l'océan, composants réutilisables pour les boutons, la typographie et les éléments interactifs, ainsi qu'un prototype fonctionnel permettant de valider les transitions et le parcours utilisateur. Cette phase de conception m'a permis de définir une identité visuelle cohérente, immersive et apaisante, guidée par des teintes profondes et lumineuses rappelant le mouvement de l'eau.<br>
+                    J'ai ensuite développé l'interface en HTML, CSS et JavaScript, en traduisant fidèlement les maquettes en composants front-end modernes. Le CSS repose sur des variables, des animations fluides et un responsive design pensé pour offrir une expérience optimale sur tous les écrans. Le JavaScript gère les interactions, les micro-animations et la navigation dynamique, renforçant la sensation de fluidité propre à l'univers océanique.<br>
+                    Le résultat est un portfolio à la fois technique et sensoriel, où chaque détail — du choix des couleurs aux transitions — contribue à une expérience élégante, moderne et personnelle.`,
+        modalParoles: "Front-end & Figma",
+        modalLinkGH: "https://github.com/niantique/Portfolio/",
+        modalLinkView: "https://niantique.github.io/Portfolio/"
     }
 ]
 
@@ -147,6 +181,12 @@ const playerImg = document.querySelector("#projects .player-img");
 const btnNext = document.querySelector(".player-btn-right");
 const btnPrev = document.querySelector(".player-btn-left");
 const btnMore = document.querySelector(".container-player-project button");
+const modalTitle = document.querySelector(".modal-top p");
+const modalImgs = document.querySelectorAll(".modal-img img");
+const modalTxt = document.querySelector(".modal-txt p");
+const modalPrl = document.querySelector(".modal-txt-content-top h3");
+const modalLkGH = document.querySelector(".GHlink");
+const modalLkView = document.querySelector(".ViewLink");
 
 let currentProject = 0;
 
@@ -185,6 +225,50 @@ btnPrev.addEventListener("click", () => {
 
 updateProject();
 
+function updateModal() {
+    const project = projects[currentProject];
+
+    modalTitle.textContent = `Découvrez ${project.modalTitle}`;
+    modalImgs.forEach((img, i) => {
+        img.src = project.modalImages[i];
+    });
+    modalTxt.innerHTML = project.modalText;
+    modalPrl.textContent = project.modalParoles;
+    modalLkGH.href = project.modalLinkGH;
+    modalLkView.href = project.modalLinkView;
+    modalLkGH.textContent = "Lien GitHub";
+    modalLkView.textContent = "Voir le projet";
+}
+
+btnMore.addEventListener("click", () => {
+    updateModal();
+    modal.style.display = "flex";
+});
+
+
+// MODAL PROJECT
+
+const modal = document.getElementById("project-modal");
+const modalClose = document.querySelector(".project-modal-close");
+
+modalClose.addEventListener("click", () => {
+    modal.style.display="none";
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+const expandBtn = document.querySelector(".modal-expand-btn");
+const modalTxtBox = document.querySelector(".modal-txt");
+
+expandBtn.addEventListener("click", () => {
+    modalTxtBox.classList.toggle("expanded");
+});
+
+
 // EXPERIENCES XP
 
 const xpData = {
@@ -205,6 +289,7 @@ Optimisation des objectifs de vente en fonction du CA, des indicateurs de vente 
     },
     sg: {
         title: "Sostrene Grene - Visuel Merchandiser",
+        
         text: `Création de vitrines et implantation de rayons en correspondance avec la charte visuelle SG.
 Gestion des commandes, organisation des livraisons, rangement du stock et  management de l'équipe dans la continuité du merchandising.
 Optimisation des ventes à partir des indicateurs de ventes (TT, PM, chiffre  d'affaires) et des audits avec la directrice du magasin.

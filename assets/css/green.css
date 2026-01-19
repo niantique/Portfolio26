@@ -146,7 +146,7 @@
 
 #description {
     height: 80vh;
-    background-color: #002C00;
+    background-color: var(--color-green-dark);
 
     .description-first {
         height: 40vh;
@@ -175,7 +175,7 @@
 
             h2 {
                 font-size: 5vw;
-                color: #007959;
+                color: var(--color-green);
                 position: absolute;
                 top: 50%;
                 left: -44%;
@@ -211,7 +211,7 @@
         }
 
         span {
-            color: #007959;
+            color: var(--color-green);
         }
 
         img {
@@ -272,7 +272,7 @@
                 transform: translateY(-50%);
                 font-size: 12vw;
                 font-weight: 800;
-                color: #007959;
+                color: var(--color-green);
                 z-index: 10;
                 opacity: 0.8;
                 animation: arrowPulse 1.6s infinite ease-in-out;
@@ -304,7 +304,7 @@
     padding-top: 5vh;
     padding-bottom: 5vh;
     padding-left: 3vw;
-    background-color: #002C00;
+    background-color: var(--color-green-dark);
     position: relative;
 
     h1 {
@@ -323,7 +323,7 @@
 
         p {
             font-size: 3vw;
-            color: #007959;
+            color: var(--color-green);
         }
 
         cursor: pointer;
@@ -369,7 +369,7 @@
 
             .timeline-btn {
                 display: inline-block;
-                background-color: #002C00;
+                background-color: var(--color-green-dark);
                 border: none;
                 font-size: 5vw;
                 color: var(--color-green-fluo);
@@ -392,7 +392,7 @@
     flex-direction: column;
     padding-top: 5vh;
     padding-bottom: 5vh;
-    background-color: #002C00;
+    background-color: var(--color-green-dark);
     align-items: center;
     position: relative;
 
@@ -518,7 +518,7 @@
             width: 21vw;
             border-top-left-radius: 7px;
             border-top-right-radius: 7px;
-            background-color: #002C00;
+            background-color: var(--color-green-dark);
             margin-top: 1vh;
             padding-top: 1vh;
 
@@ -1054,7 +1054,7 @@
 #experiences {
     padding-top: 5vh;
     padding-bottom: 5vh;
-    background-color: #002C00;
+    background-color: var(--color-green-dark);
     overflow: hidden;
 
     h1 {
@@ -1231,7 +1231,7 @@
 #skills {
     padding-top: 5vh;
     padding-bottom: 5vh;
-    background-color: #002C00;
+    background-color: var(--color-green-dark);
     overflow: hidden;
 
     h1 {
@@ -1242,7 +1242,7 @@
 
     h2 {
         font-size: 6vw;
-        color: #007959;
+        color: var(--color-green);
         white-space: nowrap;
         display: inline-block;
         line-height: 1;
@@ -1299,7 +1299,7 @@
         }
 
         a:hover {
-            color: #007959;
+            color: var(--color-green);
         }
 
         span {
@@ -1328,7 +1328,7 @@
 }
 
 #footer {
-    background-color: #002C00;
+    background-color: var(--color-green-dark);
     padding-top: 2vh;
     padding-bottom: 2vh;
 
@@ -1355,7 +1355,7 @@
 
     p {
         text-align: center;
-        color: #007959;
+        color: var(--color-green);
         font-size: 1vw;
     }
 }

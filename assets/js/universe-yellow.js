@@ -289,7 +289,7 @@ Optimisation des objectifs de vente en fonction du CA, des indicateurs de vente 
     },
     sg: {
         title: "Sostrene Grene - Visuel Merchandiser",
-        
+
         text: `Création de vitrines et implantation de rayons en correspondance avec la charte visuelle SG.
 Gestion des commandes, organisation des livraisons, rangement du stock et  management de l'équipe dans la continuité du merchandising.
 Optimisation des ventes à partir des indicateurs de ventes (TT, PM, chiffre  d'affaires) et des audits avec la directrice du magasin.

@@ -191,7 +191,7 @@
 
         .slider {
             display: flex;
-            width: 180%;
+            width: 150%;
             transition: transform 10.8s ease;
             height: 100%;
 

@@ -312,6 +312,17 @@
         font-size: 5vw;
     }
 
+    .parcours-arrow {
+        font-size: 1.8vw;
+        color: var(--color-red-fluo);
+        font-family: var(--font-player-txt);
+        opacity: 0.9;
+        pointer-events: none;
+        animation: floatHint 3s ease-in-out infinite;
+        text-transform: none;
+        text-align: center;
+    }
+
     .timeline-js {
         display: flex;
         position: sticky;
@@ -351,6 +362,9 @@
 
         h1 {
             font-size: 8vw;
+        }
+        .parcours-arrow {
+            display: none;
         }
 
         div {
